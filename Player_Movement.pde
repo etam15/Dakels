@@ -34,9 +34,4 @@ void movePlayer()
     Tone_Start(18182, 100);
     player.x++;
   }  
- if (ReadPx (player.x, player.y) == White)
-  {
-    Tone_Start(18182, 100);
-    level1;
-  }
 }

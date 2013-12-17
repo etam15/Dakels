@@ -1,9 +1,7 @@
 #include <MeggyJrSimple.h>
 
  //variables
-int color = 15;
-int robotx = 3;
-int roboty = 7;
+
 struct Point
 {
   int x;
@@ -11,7 +9,7 @@ struct Point
 };
 
 Point player = {3,1};
-
+Point robot = {3,7};
 
 void setup() //what shows up when you open it, which is level 1
 {
@@ -21,90 +19,75 @@ void setup() //what shows up when you open it, which is level 1
 void loop()
 {
   DrawPx (player.x, player.y, Blue);
-  DrawPx (robotx, roboty, White);
+  DrawPx (robot.x, robot.y, White);
   DisplaySlate();
     ClearSlate();
     movePlayer();
     moveRobots();
+    
+  if (robot.x && player.x > 7)                                                                 
+  {
+    robot.x = 7; 
+    player.x = 7;
+  }
+  if (robot.x && player.x < 0)                                                         
+  {
+    robot.x = 0;
+    player.x = 0;
+  }
+  if (robot.x && player.y > 7)                                                                 
+  {
+    robot.x = 7;
+    player.y = 7;  
+  }
+  if (robot.x && player.y < 0)                                                            
+  {
+    robot.x = 0; 
+    player.y = 0;
+  }
+    
 }
 
 void moveRobots()
 {
-  if (player.y++) 
+  if (player.y++ or player.y--) 
   {
-    if (robotx == player.x)
+    if (robot.x = player.x)
     {
-      roboty--;
+      robot.y--;
     }
       else
-       if (roboty > player.y)
+       if (robot.y > player.y)
        {
-         roboty--;
-         robotx--;
+         robot.y--;
+         robot.x--;
        }
          else 
-          if (roboty < player.y)
+          if (robot.y < player.y)
           {
-            roboty--;
-            robotx++;
+            robot.y--;
+            robot.x++;
           }
   }
-  
-  if (player.y--) 
-  {
-    if (roboty == player.y)
-    {
-      roboty--;
-    }
-      else
-       if (roboty > player.y)
-       {
-         roboty--;
-         robotx--;
-       }
-         else 
-          if (robotx < player.x)
-          {
-            robotx++;
-            roboty--;
-          }
-  }
-  if (player.x++)
-  {
-    if (robotx == player.x)
-    {}
-      else
-       if (robotx > player.x)
-       {
-         robotx--;
-         roboty--;
-       }
-         else 
-          if (robotx < player.x)
-          {
-            roboty--;
-            robotx++;
-          }
-  }  
-  if (player.x--)
+
+  if (player.x-- or player.x++)
   {   
-    if (robotx == player.x)
+    if (robot.x = player.x)
     {
-      roboty--;
+      robot.y--;
     }
       else
-       if (robotx > player.x)
+       if (robot.x > player.x)
        {
-         roboty--;
-         robotx--;
+         robot.x--;
        }
          else 
-          if (robotx < player.x)
+          if (robot.x < player.x)
           {
-            roboty--;
-            robotx++;
+            robot.x++;
           }
   }
 }
 
+ 
 
