@@ -19,8 +19,8 @@ void setup() //what shows up when you open it, which is level 1
 
 void loop()
 {
-  DrawPx (player.x, player.y, Blue);
-  DrawPx (robot.x, robot.y, White);
+  DrawPx (player.x, player.y, White);
+  DrawPx (robot.x, robot.y, Red);
   DisplaySlate();
   delay(100);
     ClearSlate();
