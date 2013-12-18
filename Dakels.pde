@@ -29,6 +29,14 @@ void loop()
     Serial.println(player.x);
     Serial.print("Y = ");
     Serial.println(player.y);
+    
+    if (ReadPx (player.x, player.y) == White)
+    {
+      Tone_Start(18182, 100);
+      ClearSlate();
+      player.x = 3;
+      player.y = 1;
+    }
 }
     
 
@@ -53,23 +61,24 @@ void moveRobots()
     robot.x++;
   }
   
-  if (robot.x > 7)                                                                 
-  {
-    robot.x = 0;
-  }
-  if (robot.x < 0)                                                         
+   if (robot.x > 7)                                                                 
   {
     robot.x = 7;
   }
+  if (robot.x < 0)                                                         
+  {
+    robot.x = 0;
+  }
   if (robot.y > 7)                                                                 
   {
-    robot.y = 0;  
+    robot.y = 7;  
   }
   if (robot.y < 0)                                                            
   {
-    robot.y = 7;
+    robot.y = 1;
   }
 }
+
 
 
 
