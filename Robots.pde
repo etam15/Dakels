@@ -1,43 +1,49 @@
-void drawRobots()
+void drawrobots()
 {
+  for (int i = 0; i < numberOfRobots; i++)
+  {
+    DrawPx (robots[i].x, robots[i].y, Red);
+  }
 } 
 
 void moveRobots()
 {
-
-  if (robot.y < player.y) 
+  for (int i = 0; i < numberOfRobots; i++)
   {
-    robot.y++; 
+    if (robots[i].y < player.y) 
+  {
+    robots[i].y++; 
   }
-  else if (robot.y > player.y)
+  else if (robots[i].y > player.y)
   {
-    robot.y--;
-  }
-  
-  if (robot.x > player.x)
-  {
-    robot.x--;
-  }
- else if (robot.x < player.x)
-  {
-    robot.x++;
+    robots[i].y--;
   }
   
-   if (robot.x > 7)                                                                 
+  if (robots[i].x > player.x)
   {
-    robot.x = 7;
+    robots[i].x--;
   }
-  if (robot.x < 0)                                                         
+ else if (robots[i].x < player.x)
   {
-    robot.x = 0;
+    robots[i].x++;
   }
-  if (robot.y > 7)                                                                 
+  
+   if (robots[i].x > 7)                                                                 
   {
-    robot.y = 7;  
+    robots[i].x = 7;
   }
-  if (robot.y < 0)                                                            
+  if (robots[i].x < 0)                                                         
   {
-    robot.y = 1;
+    robots[i].x = 0;
+  }
+  if (robots[i].y > 7)                                                                 
+  {
+    robots[i].y = 7;  
+  }
+  if (robots[i].y < 0)                                                            
+  {
+    robots[i].y = 1;
+  }
   }
 }
 

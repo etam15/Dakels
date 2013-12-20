@@ -1,6 +1,7 @@
 #include <MeggyJrSimple.h>
-
+//if numberOfRobots < 8, numberOfRobots++
  //variables
+int numberOfRobots = 2;
 
 struct Point
 {
@@ -29,7 +30,7 @@ void setup() //what shows up when you open it, which is level 1
 void loop()
 {
   DrawPx (player.x, player.y, White);
-  DrawPx (robot.x, robot.y, Red);
+  drawrobots();
   DisplaySlate();
   delay(100);
     ClearSlate();
