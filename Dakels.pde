@@ -8,6 +8,15 @@ struct Point
   int y;
 };
 
+Point s1 = {3,4};
+Point s2 = {4,6};
+Point s3 = {0,4};
+Point s4 = 
+Point s5 =
+Point s6 = 
+Point s7 = 
+Point s8 = 
+Point robots = {
 Point player = {3,1};
 Point robot = {3,7};
 
