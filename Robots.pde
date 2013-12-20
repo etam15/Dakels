@@ -1,3 +1,6 @@
+void drawRobots()
+{
+} 
 
 void moveRobots()
 {

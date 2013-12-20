@@ -11,12 +11,12 @@ struct Point
 Point s1 = {3,4};
 Point s2 = {4,6};
 Point s3 = {0,4};
-Point s4 = 
-Point s5 =
-Point s6 = 
-Point s7 = 
-Point s8 = 
-Point robots = {
+Point s4 = {5,2};
+Point s5 = {1,2};
+Point s6 = {0,7};
+Point s7 = {2,5};
+Point s8 = {4,1};
+Point robots[8] = {s1, s2, s3, s4, s5, s6, s7, s8};
 Point player = {3,1};
 Point robot = {3,7};
 
