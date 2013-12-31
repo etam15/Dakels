@@ -1,8 +1,5 @@
 void level1()
 {
-  DrawPx(robot.x, robot.y, White);
-  delay(100);
-  DisplaySlate();
 }
 
 void level2()
